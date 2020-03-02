@@ -23,9 +23,13 @@ repositories {
 }
 
 dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'lib')
+//    implementation files('lib/gdax-java-websocket-client-1.2.jar')
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'org.springframework.boot:spring-boot-starter-integration'
+//    implementation 'org.springframework.boot:spring-boot-starter-messaging'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'mysql:mysql-connector-java'
